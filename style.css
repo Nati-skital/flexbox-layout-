@@ -1,0 +1,319 @@
+/* custom properties decelerations */
+:root{
+  --light: #fff; 
+  --smallMargin: 1rem;
+  --smallPadding: 1rem;
+}
+
+/* reset default browser */
+*,
+::before, 
+::after{
+  padding: 0; 
+  margin: 0; 
+  box-sizing: inherit;
+  text-decoration: none; 
+}
+
+/* 1rem = 10px */
+html{font-size: 62.5%;}
+
+body{
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6; 
+}
+
+/* special class for the navbar*/
+.hide{display: none;}
+
+/* utility classes */
+.center{text-align: center;}
+.flex{display: flex;}
+.flex-ho-vr-align{justify-content: center; align-items: center;}
+.mar-1{margin: 1rem;}
+.pad-1{padding: 1rem;}
+.white{color: #fff;}
+
+/*------navbar--------------*/
+#navbar{
+  height: 10vh;
+  background-color: rgb(0,0,0); 
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo{
+  background-image: linear-gradient(to right,
+  rgba(236, 241, 243, 0.8),
+  rgba(148, 150, 151, 0.8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.logo:hover{cursor: pointer;}
+
+.navbar-links a{
+  margin-right: 2rem;
+  color: var(--light);
+}
+
+.navbar-links a:hover{font-weight: 500;}
+
+/* --------sidenav---------------------------------------*/
+#sidenav{
+  height: 100vh;
+  width: 20rem;
+  background-color: rgb(0,0,0); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 3rem;
+  flex-direction: column;
+  display: none;
+}
+
+.closeMenu{
+  font-size: 2.2rem;
+  color: red;
+  padding-bottom: 2rem; 
+}
+
+.closeMenu:hover{transform: scale(1.1); font-weight: 500;}
+
+.closeMenu:hover{cursor: pointer;}
+
+#sidenav > a{display: inline-block; width: 100%;}
+
+#sidenav > a:hover{background-color: grey;}
+
+/*------header-----------*/
+#showcase{
+  height: 100vh;
+  background-image: url('img/showcase.jpeg');
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.showcase-heading > h1{
+  font-size: 6rem;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.showcase-heading > h2{
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: .5rem;
+  color: var(--light);
+}
+
+/*-------------------About--------------------------------*/
+#about{
+  background-color: var(--light);
+  padding: 2rem;
+}
+
+.reviews{
+  width: 30%;
+  padding: 2rem;
+  margin-right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviews > div, .us > div, .main-form > div{
+  background-color: #f4f4f4;
+  margin: 1rem;
+  text-align: center;
+}
+
+.us{
+  width: 40%;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-form{
+  width: 30%;
+  padding: 2rem;
+}
+
+/*reviews*/
+
+.review-content > blockquote::before{
+  content: '\201c';
+  color: #f1c07e;
+  font-size: 2rem;
+} 
+
+.review-content > blockquote::after{
+  content: '\201c';
+  color: #f1c07e;
+  font-size: 2rem;
+} 
+
+.review-user{justify-content: space-around;}
+
+.user-photo > img{
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.review-rating{
+  padding-bottom: 1rem;
+  color: rgb(226, 226, 87);
+}
+
+/* about */
+
+/* main-form */
+#main-form{background-color: #333;}
+
+.form-field{
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+.form-field > label{
+  color: var(--light);
+  padding: 0 1rem;  
+  font-weight: 500;
+}
+
+button{
+  background-color: rgb(40, 40, 136);
+  font-size: inherit;
+  width: 80%;
+  border: none;
+  font-weight: bold;
+}
+
+button:active{outline: none;}
+
+/* address */
+.address{flex-direction: column;}
+
+.address > div {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.address > div:not(:last-child){border-bottom: 1px dotted gray;}
+
+.address-icon, .phone-icon, .mail-icon{margin-right: 1rem;} 
+/*------------------details---------------------------------*/
+.details{
+  background-color: #f4f4f4;
+  padding: 3rem;
+}
+
+.details-row{justify-content: space-evenly;}
+
+.detalis-box:not(:last-child){margin-right: 1rem;}
+
+.moving-number{font-size: 3rem;}
+
+.moving-text{font-size: 2rem;}
+
+.detail-moving > span{
+  display: block;
+  text-align: center;
+}
+
+.blue{color: blue;}
+.yellow{color:rgb(226, 226, 87);}
+.grey{color: rgb(172, 172, 164);}
+.green{color: rgb(81, 238, 20);}
+
+/*------------------services---------------------------------*/
+#services{
+  background-color: var(--light);
+  padding: 2.5rem;
+}
+
+.services-main-heading{margin-bottom: 1.5rem;}
+
+.services-main-heading > h2{margin-bottom: 1rem;}
+
+.service-item{
+  padding: var(--smallPadding);
+  margin: var(--smallMargin);
+}
+
+.service-item:not(:last-child){margin-right: 1.5rem;}
+
+.service-item-icon{margin-right: 1rem;}
+
+/*--------------footer-----------------------------------*/
+footer{
+  background-color: rgb(29, 19, 19);
+  padding: 2rem 3rem;
+}
+
+.footer-main-content{justify-content: space-between;}
+
+.company-overview{flex: 0 0 30%;}
+
+.footer-links{flex-direction: column;}
+
+.footer-links > *:not(:last-child),
+.company-overview > *:not(:last-child){margin-bottom: 1rem;}
+
+.footer-links > a{ 
+  color: var(--light);
+  font-weight: 400;
+}
+
+.footer-links > a:hover{text-decoration: underline;} 
+
+.footer-secondary-content{justify-content: space-between;}
+
+.footer-social-media span{padding-right: 1.5rem;}
+
+/*-------media queries-----*/
+@media (max-width:70rem){
+  .mail-address >span{display: block;}
+}
+
+@media (max-width:50rem){
+  #showcase{height: 60vh;}
+  .services-items-row{flex-direction: column;}
+  .company-content{flex-direction: column;}
+  .company-content > div{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .us{order: -1;}
+  .mail-address >span{display: inline;}
+}
+
+@media (max-width: 40rem){
+  .footer-links{display: none;}
+  footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-secondary-content{
+    flex-direction: column-reverse; 
+  }
+  .footer-social-media > span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 30rem){
+  .navbar-links{display: none;}
+  .hide{display: flex;}  
+  .details-row{flex-direction: column;}
+}
+
